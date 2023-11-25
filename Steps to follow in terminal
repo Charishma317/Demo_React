@@ -1,4 +1,5 @@
 Commands in Terminal:
+
  Step1 ---- Start the Django project: django-admin startproject project
  Step2 ----- Django app for user profiles: cd project
                                python manage.py startapp profiles
