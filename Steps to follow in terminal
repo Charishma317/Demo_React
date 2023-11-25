@@ -1,0 +1,32 @@
+Commands in Terminal:
+ Step1 ---- Start the Django project: django-admin startproject project
+ Step2 ----- Django app for user profiles: cd project
+                               python manage.py startapp profiles
+
+Step3 ------ Update the settings in project/settings.py to include the profiles app and the faker module:
+INSTALLED_APPS = [
+    ...
+    'profiles',
+    'faker',
+]
+
+Step4 ----- Create the UserProfile model in the database: python manage.py makemigrations
+                                              python manage.py migrate
+
+Step5 ------ Add a script to populate the database with fake data. 
+             You can run this script by typing---  python populate_db.py  
+                             OR 
+             we can use the file 'populate_db.py' from the repo.
+
+Step6 ---- You can update the userprfile automatically by using --- profiles/models.py   
+                            OR 
+            use the 'UserProfile.py' file from the repo.
+
+Step7 ---- We can view and edit the profile information by 'views.py' file from repo.
+
+Step8 ----- Create a new template -- profiles/templates/profiles/profile.html
+
+Step9 -----   Add a URL route for the profile view by Updating -- 'urls.py' in repo.
+
+Step10 ---- Now, you can run the development server with 'python manage.py runserver' and 
+view the UserProfile model data by navigating to  --- http://localhost:8000/profile/.
