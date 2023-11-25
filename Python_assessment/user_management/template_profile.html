@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <h2>{{ profile.user.username }}'s Profile</h2>
+ <p><strong>Designation:</strong> {{ profile.designation }}</p>
+ <p><strong>Company:</strong> {{ profile.company }}</p>
+ <p><strong>About:</strong> {{ profile.about }}</p>
+ <p><strong>Areas of Interest:</strong>
+    <ul>
+      {% for interest in profile.areas_of_interest.all %}
+        <li>{{ interest.name }}</li>
+      {% endfor %}
+    </ul>
+ </p>
+ <p><strong>Display Picture:</strong>
+    <img src="{{ profile.display_picture.url }}" alt="{{ profile.user.username }}'s display picture" width="100" height="100">
+ </p>
+{% endblock %}
