@@ -1,0 +1,14 @@
+Step1 --- Create a virtual environment: 'python -m venv myenv'
+
+Step2 --- Activate the virtual environment : 'source myenv/bin/activate'
+
+Step3 --- After installing django and djangofranework ,Create a new Django project: 'django-admin startproject myproject.'
+Step4 --- Add Django REST framework to INSTALLED_APPS: Add Django REST framework to your project's INSTALLED_APPS setting in the settings.py file.
+          You can do this by adding 'rest_framework' to the list of installed apps.
+
+Step5 --- Create a new app: 'python manage.py startapp myapp.'
+Step6 --- Add the app to INSTALLED_APPS: to project's 'INSTALLED_APPS' setting in the 'settings.py' file.
+
+Step7 --- Define your model : 'models.py'
+Step8 --- Finally, start the development server by running 'python manage.py runserver'.
+           You can now access your API by visiting 'http://localhost:8000/' in your web browser.
